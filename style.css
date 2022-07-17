@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+/* 
+font-family: 'Roboto', sans-serif; 
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; 
+}
+
+html, body {
+    overflow: hidden;
+}
+
+h1::selection{
+    color: red;
+    background-color: #000;
+}
+
+:root {
+    font-size: 62.5%; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0000;
+    background-image: url('src/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px) brightness(30%);
+    color: #FFF;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('src/banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-clip-path: circle(120px);
+    clip-path: circle(120px);
+  
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25%;
+    animation: toFloat 5s infinite;
+}
+
+.info > p, .info > h1{
+    max-width: 80%;
+}
+
+.info h1{
+    font-size: 7rem;
+    font-weight: 700;
+}
+
+.info > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.info > div span{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-right: 0.5rem;
+    padding: 0 0.5rem 0 0;
+    color: #DBDBDB;
+}
+
+.info > div span:nth-child(odd)::after{
+    content: '|';
+    padding: 0 0.5rem;
+}
+
+.info > p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    color: #FFFF;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+.info  button{
+    padding: 1rem;
+    background: transparent;
+    border: solid 0.1rem #FFFF;
+    color: #FFFF;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.info button:hover{
+    background: rgb(255, 0, 0);
+    border: solid 0.3rem #000;
+    transition: 0.5s ease;
+}
+
+@keyframes toFloat{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
